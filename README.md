@@ -35,139 +35,182 @@ Split the image (boy.jpg) into B, G, R components and display the channels
 - **Register Number:** 212223240035
 
   ### Ex. No. 01
-
-#### 1. Read the image ('Eagle_in_Flight.jpg') using OpenCV imread() as a grayscale image.
-```python
-# YOUR CODE HERE
 ```
+#Step 1: Import python necessary libraries and Read the image using CV2
+import cv2
+import matplotlib.pyplot as plt
+img = cv2.imread('eagle.jpg', cv2.IMREAD_COLOR)
 
-#### 2. Print the image width, height & Channel.
-```python
-# YOUR CODE HERE
+# Step 2: Print image size
+img.shape
+
+<img width="373" height="61" alt="image" src="https://github.com/user-attachments/assets/ecf40f46-35e1-4254-a684-e1cacfadeb19" />
+
+# Step 3: Convert BGR to RGB
+img_rgb = cv2.cvtColor(img, cv2.COLOR_BGR2RGB)
+
+# Step 4: Display original image
+plt.imshow(img_rgb, cmap='viridis')  # You can change 'viridis' to another cmap or use None for RGB images
+plt.title("Original Image")
+plt.axis('off')  # Removes axis ticks and labels
+plt.show()
+
+<img width="720" height="606" alt="image" src="https://github.com/user-attachments/assets/9d5c590d-e6f5-438e-be57-c0a192b5f05e" />
+
+
+# Step 5: Draw Line
+line_img = cv2.line(img_rgb.copy(), (0,0), (651,518), (255,0,0), 5)
+
+plt.imshow(line_img)
+plt.title("Image with Line")
+plt.axis("off")
+plt.show()
+
+<img width="815" height="688" alt="image" src="https://github.com/user-attachments/assets/09e45233-7ed9-47b3-897e-74285d41c0e9" />
+
+# Step 6: Draw Circle
+circle_img = cv2.circle(img_rgb.copy(), (400,300), 150, (255,0,0), 10)
+
+plt.imshow(circle_img, cmap='viridis')  
+plt.title("Image with Circle")
+plt.axis('off')  
+plt.show()
+
+<img width="812" height="699" alt="image" src="https://github.com/user-attachments/assets/fd3243b2-98f4-453c-bd1e-6ae30689342b" />
+
+
+# Step 7: Draw Rectangle
+rectangle_img = cv2.rectangle(img_rgb.copy(), (0,0), (651,518), (0,0,255), 10)
+
+plt.imshow(rectangle_img, cmap='viridis')  
+plt.title("Image with Rectangle")
+plt.axis('off')  
+plt.show()
+
+<img width="812" height="697" alt="image" src="https://github.com/user-attachments/assets/fbc81b6d-9923-4729-9f67-4ddb6b1b6333" />
+
+
+# Step 8: Add Text
+text_img = cv2.putText(img_rgb.copy(), "OpenCV Drawing", (80,60),cv2.FONT_HERSHEY_SIMPLEX, 1.2, (0,255,0), 3)
+
+plt.imshow(text_img, cmap='viridis')  
+plt.title("Image with Text")
+plt.axis('off')  
+plt.show()
+
+<img width="819" height="690" alt="image" src="https://github.com/user-attachments/assets/8b1a0b4b-e1a6-4571-adf0-2a3ac6d7a76e" />
+
+# Step 9: Load the image and convert to RGB image
+image = cv2.imread('eagle.jpg')
+
+image_rgb = cv2.cvtColor(image, cv2.COLOR_BGR2RGB)
+
+# Original RGB Image
+plt.imshow(image_rgb)
+plt.title("Original RGB Image")
+plt.axis("off")
+
+<img width="754" height="646" alt="image" src="https://github.com/user-attachments/assets/87988390-4157-4ce4-9d69-a4d5f0baca98" />
+
+
+# Step 10: Convert RGB to HSV
+image_hsv = cv2.cvtColor(img_rgb, cv2.COLOR_RGB2HSV)
+
+plt.imshow(image_hsv)
+plt.title("HSV Image")
+plt.axis("off")
+plt.show()
+
+<img width="752" height="635" alt="image" src="https://github.com/user-attachments/assets/228fac8c-4a7d-4755-aaba-921d40123424" />
+
+
+# Step 11: Convert RGB to Gray
+image_gray = cv2.cvtColor(img_rgb, cv2.COLOR_RGB2GRAY)
+
+plt.imshow(image_gray, cmap='gray')
+plt.title("Gray Image")
+plt.axis("off")
+plt.show()
+
+<img width="751" height="635" alt="image" src="https://github.com/user-attachments/assets/42fcfb4c-614d-45ec-90db-e959a2158bfd" />
+
+
+# Step 12: Convert RGB to YCrCb
+image_ycrcb = cv2.cvtColor(img_rgb, cv2.COLOR_RGB2YCrCb)
+
+plt.imshow(image_ycrcb)
+plt.title("YCrCb Image")
+plt.axis("off")
+plt.show()
+
+<img width="666" height="560" alt="image" src="https://github.com/user-attachments/assets/46274cef-006f-4fbc-93cc-3c79465c92dd" />
+
+# Step 13: Convert HSV back to RGB
+image_hsv_to_rgb = cv2.cvtColor(image_hsv, cv2.COLOR_HSV2RGB)
+
+plt.imshow(image_hsv_to_rgb)
+plt.title("HSV to RGB Image")
+plt.axis("off")
+
+<img width="670" height="570" alt="image" src="https://github.com/user-attachments/assets/7a15b74f-0062-45fd-a122-bcde90dadf63" />
+
+
+# Step 14: White Block
+img[180:480,220:520] = [255,255,255]
+
+plt.imshow(cv2.cvtColor(img, cv2.COLOR_BGR2RGB))
+plt.title("Image with 300x300 White Block")
+plt.axis("off")
+plt.show()
+
+<img width="674" height="576" alt="image" src="https://github.com/user-attachments/assets/9d70554b-3491-40d9-9898-d024f6c5ce6a" />
+
+
+# Step 15: Resize
+image = cv2.imread('eagle.jpg')
+resize = cv2.resize(image, (384,300))
+
+plt.imshow(cv2.cvtColor(resize, cv2.COLOR_BGR2RGB))
+plt.title("Resized Image (Half Size)")
+plt.axis("off")
+plt.show()
+
+<img width="744" height="619" alt="image" src="https://github.com/user-attachments/assets/f650e011-6033-4628-9fa3-f0d7140a73ca" />
+
+
+# Step 16: Crop
+crop = image[120:420,150:500]
+
+plt.imshow(cv2.cvtColor(crop, cv2.COLOR_BGR2RGB))
+plt.title("Cropped Eagle")
+plt.axis("off")
+plt.show()
+
+<img width="677" height="622" alt="image" src="https://github.com/user-attachments/assets/fc0802a3-a997-479c-87c9-2881c48e0bdc" />
+
+
+# Step 17: Horizontal Flip
+flip_h = cv2.flip(image,1)
+
+plt.imshow(cv2.cvtColor(flip_h, cv2.COLOR_BGR2RGB))
+plt.title("Horizontal Flip")
+plt.axis("off")
+plt.show()
+
+<img width="733" height="621" alt="image" src="https://github.com/user-attachments/assets/dfda37d9-7e50-4abc-ae01-622f02217423" />
+
+
+# Step 18: Vertical Flip
+flip_v = cv2.flip(image,0)
+
+plt.imshow(cv2.cvtColor(flip_v, cv2.COLOR_BGR2RGB))
+plt.title("Vertical Flip")
+plt.axis("off")
+plt.show()
+
+<img width="735" height="623" alt="image" src="https://github.com/user-attachments/assets/300adf4a-ad32-4ed9-9ab8-2ff207abb29d" />
+
 ```
-
-#### 3. Display the image using matplotlib imshow().
-```python
-# YOUR CODE HERE
-```
-
-#### 4. Save the image as a PNG file using OpenCV imwrite().
-```python
-# YOUR CODE HERE
-```
-
-#### 5. Read the saved image above as a color image using cv2.cvtColor().
-```python
-# YOUR CODE HERE
-```
-
-#### 6. Display the Colour image using matplotlib imshow() & Print the image width, height & channel.
-```python
-# YOUR CODE HERE
-```
-
-#### 7. Crop the image to extract any specific (Eagle alone) object from the image.
-```python
-# YOUR CODE HERE
-```
-
-#### 8. Resize the image up by a factor of 2x.
-```python
-# YOUR CODE HERE
-```
-
-#### 9. Flip the cropped/resized image horizontally.
-```python
-# YOUR CODE HERE
-```
-
-#### 10. Read in the image ('Apollo-11-launch.jpg').
-```python
-# YOUR CODE HERE
-```
-
-#### 11. Add the following text to the dark area at the bottom of the image (centered on the image):
-```python
-text = 'Apollo 11 Saturn V Launch, July 16, 1969'
-font_face = cv2.FONT_HERSHEY_PLAIN
-# YOUR CODE HERE: use putText()
-```
-
-#### 12. Draw a magenta rectangle that encompasses the launch tower and the rocket.
-```python
-rect_color = magenta
-# YOUR CODE HERE
-```
-
-#### 13. Display the final annotated image.
-```python
-# YOUR CODE HERE
-```
-
-#### 14. Read the image ('Boy.jpg').
-```python
-# YOUR CODE HERE
-```
-
-#### 15. Adjust the brightness of the image.
-```python
-# Create a matrix of ones (with data type float64)
-# matrix_ones = 
-# YOUR CODE HERE
-```
-
-#### 16. Create brighter and darker images.
-```python
-img_brighter = cv2.add(img, matrix)
-img_darker = cv2.subtract(img, matrix)
-# YOUR CODE HERE
-```
-
-#### 17. Display the images (Original Image, Darker Image, Brighter Image).
-```python
-# YOUR CODE HERE
-```
-
-#### 18. Modify the image contrast.
-```python
-# Create two higher contrast images using the 'scale' option with factors of 1.1 and 1.2 (without overflow fix)
-matrix1 = 
-matrix2 = 
-# img_higher1 = 
-# img_higher2 = 
-# YOUR CODE HERE
-```
-
-#### 19. Display the images (Original, Lower Contrast, Higher Contrast).
-```python
-# YOUR CODE HERE
-```
-
-#### 20. Split the image (boy.jpg) into the B,G,R components & Display the channels.
-```python
-# YOUR CODE HERE
-```
-
-#### 21. Merged the R, G, B , displays along with the original image
-```python
-# YOUR CODE HERE
-```
-
-#### 22. Split the image into the H, S, V components & Display the channels.
-```python
-# YOUR CODE HERE
-```
-#### 23. Merged the H, S, V, displays along with original image.
-```python
-# YOUR CODE HERE
-```
-
-## Output:
-- **i)** Read and Display an Image.  
-- **ii)** Adjust Image Brightness.  
-- **iii)** Modify Image Contrast.  
-- **iv)** Generate Third Image Using Bitwise Operations.
-
 ## Result:
 Thus, the images were read, displayed, brightness and contrast adjustments were made, and bitwise operations were performed successfully using the Python program.
 
