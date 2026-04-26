@@ -49,7 +49,7 @@ img = cv2.imread('eagle.jpg', cv2.IMREAD_COLOR)
 img.shape
 ```
 
-<img width="750" height="350" alt="image" src="https://github.com/user-attachments/assets/ecf40f46-35e1-4254-a684-e1cacfadeb19" />
+<img width="450" height="250" alt="image" src="https://github.com/user-attachments/assets/ecf40f46-35e1-4254-a684-e1cacfadeb19" />
 
 ## Step 3: Convert BGR to RGB
 ```
