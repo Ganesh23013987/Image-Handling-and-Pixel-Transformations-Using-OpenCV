@@ -37,26 +37,26 @@ Split the image (boy.jpg) into B, G, R components and display the channels
   ### Ex. No. 01
 
 
-# Step 1: Import python necessary libraries and Read the image using CV2
+## Step 1: Import python necessary libraries and Read the image using CV2
 ```
 import cv2
 import matplotlib.pyplot as plt
 img = cv2.imread('eagle.jpg', cv2.IMREAD_COLOR)
 ```
 
-# Step 2: Print image size
+## Step 2: Print image size
 ```
 img.shape
 ```
 
 <img width="300" height="300" alt="image" src="https://github.com/user-attachments/assets/ecf40f46-35e1-4254-a684-e1cacfadeb19" />
 
-# Step 3: Convert BGR to RGB
+## Step 3: Convert BGR to RGB
 ```
 img_rgb = cv2.cvtColor(img, cv2.COLOR_BGR2RGB)
 ```
 
-# Step 4: Display original image
+## Step 4: Display original image
 ```
 plt.imshow(img_rgb, cmap='viridis')  # You can change 'viridis' to another cmap or use None for RGB images
 plt.title("Original Image")
@@ -67,7 +67,7 @@ plt.show()
 <img width="450" height="450" alt="image" src="https://github.com/user-attachments/assets/9d5c590d-e6f5-438e-be57-c0a192b5f05e" />
 
 
-# Step 5: Draw Line
+## Step 5: Draw Line top left to bottom right(diagonal line)
 ```
 line_img = cv2.line(img_rgb.copy(), (0,0), (651,518), (255,0,0), 5)
 
@@ -79,7 +79,7 @@ plt.show()
 
 <img width="450" height="450" alt="image" src="https://github.com/user-attachments/assets/09e45233-7ed9-47b3-897e-74285d41c0e9" />
 
-# Step 6: Draw Circle
+## Step 6: Draw Circle on eagle image
 ```
 circle_img = cv2.circle(img_rgb.copy(), (400,300), 150, (255,0,0), 10)
 
@@ -92,7 +92,7 @@ plt.show()
 <img width="450" height="450" alt="image" src="https://github.com/user-attachments/assets/fd3243b2-98f4-453c-bd1e-6ae30689342b" />
 
 
-# Step 7: Draw Rectangle
+## Step 7: Draw Rectangle to fit te outline of image
 ```
 rectangle_img = cv2.rectangle(img_rgb.copy(), (0,0), (651,518), (0,0,255), 10)
 
@@ -105,7 +105,7 @@ plt.show()
 <img width="450" height="450" alt="image" src="https://github.com/user-attachments/assets/fbc81b6d-9923-4729-9f67-4ddb6b1b6333" />
 
 
-# Step 8: Add Text
+## Step 8: Add Text On Image
 ```
 text_img = cv2.putText(img_rgb.copy(), "OpenCV Drawing", (80,60),cv2.FONT_HERSHEY_SIMPLEX, 1.2, (0,255,0), 3)
 
@@ -117,7 +117,7 @@ plt.show()
 
 <img width="450" height="450" alt="image" src="https://github.com/user-attachments/assets/8b1a0b4b-e1a6-4571-adf0-2a3ac6d7a76e" />
 
-# Step 9: Load the image and convert to RGB image
+## Step 9: Load the image and convert to RGB image
 ```
 image = cv2.imread('eagle.jpg')
 
@@ -131,7 +131,7 @@ plt.axis("off")
 
 <img width="450" height="450" alt="image" src="https://github.com/user-attachments/assets/87988390-4157-4ce4-9d69-a4d5f0baca98" />
 
-# Step 10: Convert RGB to HSV
+## Step 10: Convert RGB to HSV
 ```
 image_hsv = cv2.cvtColor(img_rgb, cv2.COLOR_RGB2HSV)
 
@@ -144,7 +144,7 @@ plt.show()
 <img width="450" height="450" alt="image" src="https://github.com/user-attachments/assets/228fac8c-4a7d-4755-aaba-921d40123424" />
 
 
-# Step 11: Convert RGB to Gray
+## Step 11: Convert RGB to Gray
 ```
 image_gray = cv2.cvtColor(img_rgb, cv2.COLOR_RGB2GRAY)
 
@@ -157,7 +157,7 @@ plt.show()
 <img width="450" height="450" alt="image" src="https://github.com/user-attachments/assets/42fcfb4c-614d-45ec-90db-e959a2158bfd" />
 
 
-# Step 12: Convert RGB to YCrCb
+## Step 12: Convert RGB to YCrCb
 ```
 image_ycrcb = cv2.cvtColor(img_rgb, cv2.COLOR_RGB2YCrCb)
 
@@ -169,7 +169,7 @@ plt.show()
 
 <img width="450" height="450" alt="image" src="https://github.com/user-attachments/assets/46274cef-006f-4fbc-93cc-3c79465c92dd" />
 
-# Step 13: Convert HSV back to RGB
+## Step 13: Convert HSV back to RGB
 ```
 image_hsv_to_rgb = cv2.cvtColor(image_hsv, cv2.COLOR_HSV2RGB)
 
@@ -181,7 +181,7 @@ plt.axis("off")
 <img width="450" height="450" alt="image" src="https://github.com/user-attachments/assets/7a15b74f-0062-45fd-a122-bcde90dadf63" />
 
 
-# Step 14: White Block
+## Step 14: White Block
 ```
 img[180:480,220:520] = [255,255,255]
 
@@ -194,7 +194,7 @@ plt.show()
 <img width="450" height="450" alt="image" src="https://github.com/user-attachments/assets/9d70554b-3491-40d9-9898-d024f6c5ce6a" />
 
 
-# Step 15: Resize
+## Step 15: Resize Of Image
 ```
 image = cv2.imread('eagle.jpg')
 resize = cv2.resize(image, (384,300))
@@ -208,7 +208,7 @@ plt.show()
 <img width="450" height="450" alt="image" src="https://github.com/user-attachments/assets/f650e011-6033-4628-9fa3-f0d7140a73ca" />
 
 
-# Step 16: Crop
+## Step 16: Crop
 ```
 crop = image[120:420,150:500]
 
@@ -221,7 +221,7 @@ plt.show()
 <img width="450" height="450" alt="image" src="https://github.com/user-attachments/assets/fc0802a3-a997-479c-87c9-2881c48e0bdc" />
 
 
-# Step 17: Horizontal Flip
+## Step 17: Horizontal Flip
 ```
 flip_h = cv2.flip(image,1)
 
@@ -234,7 +234,7 @@ plt.show()
 <img width="450" height="450" alt="image" src="https://github.com/user-attachments/assets/dfda37d9-7e50-4abc-ae01-622f02217423" />
 
 
-# Step 18: Vertical Flip
+## Step 18: Vertical Flip
 ```
 flip_v = cv2.flip(image,0)
 
