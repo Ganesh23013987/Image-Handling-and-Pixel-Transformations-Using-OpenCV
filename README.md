@@ -34,7 +34,7 @@ Split the image (boy.jpg) into B, G, R components and display the channels
 - **Name:** GANESH D  
 - **Register Number:** 212223240035
 
-  ### Ex. No. 01
+### Ex. No. 01
 
 
 ## Step 1: Import python necessary libraries and Read the image using CV2
