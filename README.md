@@ -49,7 +49,7 @@ img = cv2.imread('eagle.jpg', cv2.IMREAD_COLOR)
 img.shape
 ```
 
-<img width="373" height="61" alt="image" src="https://github.com/user-attachments/assets/ecf40f46-35e1-4254-a684-e1cacfadeb19" />
+<img width="300" height="300" alt="image" src="https://github.com/user-attachments/assets/ecf40f46-35e1-4254-a684-e1cacfadeb19" />
 
 # Step 3: Convert BGR to RGB
 ```
@@ -64,7 +64,7 @@ plt.axis('off')  # Removes axis ticks and labels
 plt.show()
 ```
 
-<img width="720" height="606" alt="image" src="https://github.com/user-attachments/assets/9d5c590d-e6f5-438e-be57-c0a192b5f05e" />
+<img width="600" height="600" alt="image" src="https://github.com/user-attachments/assets/9d5c590d-e6f5-438e-be57-c0a192b5f05e" />
 
 
 # Step 5: Draw Line
@@ -77,7 +77,7 @@ plt.axis("off")
 plt.show()
 ```
 
-<img width="815" height="688" alt="image" src="https://github.com/user-attachments/assets/09e45233-7ed9-47b3-897e-74285d41c0e9" />
+<img width="650" height="650" alt="image" src="https://github.com/user-attachments/assets/09e45233-7ed9-47b3-897e-74285d41c0e9" />
 
 # Step 6: Draw Circle
 ```
@@ -89,7 +89,7 @@ plt.axis('off')
 plt.show()
 ```
 
-<img width="812" height="699" alt="image" src="https://github.com/user-attachments/assets/fd3243b2-98f4-453c-bd1e-6ae30689342b" />
+<img width="650" height="650" alt="image" src="https://github.com/user-attachments/assets/fd3243b2-98f4-453c-bd1e-6ae30689342b" />
 
 
 # Step 7: Draw Rectangle
@@ -102,7 +102,7 @@ plt.axis('off')
 plt.show()
 ```
 
-<img width="812" height="697" alt="image" src="https://github.com/user-attachments/assets/fbc81b6d-9923-4729-9f67-4ddb6b1b6333" />
+<img width="650" height="650" alt="image" src="https://github.com/user-attachments/assets/fbc81b6d-9923-4729-9f67-4ddb6b1b6333" />
 
 
 # Step 8: Add Text
@@ -115,7 +115,7 @@ plt.axis('off')
 plt.show()
 ```
 
-<img width="819" height="690" alt="image" src="https://github.com/user-attachments/assets/8b1a0b4b-e1a6-4571-adf0-2a3ac6d7a76e" />
+<img width="650" height="650" alt="image" src="https://github.com/user-attachments/assets/8b1a0b4b-e1a6-4571-adf0-2a3ac6d7a76e" />
 
 # Step 9: Load the image and convert to RGB image
 ```
@@ -129,7 +129,7 @@ plt.title("Original RGB Image")
 plt.axis("off")
 ```
 
-<img width="754" height="646" alt="image" src="https://github.com/user-attachments/assets/87988390-4157-4ce4-9d69-a4d5f0baca98" />
+<img width="650" height="650" alt="image" src="https://github.com/user-attachments/assets/87988390-4157-4ce4-9d69-a4d5f0baca98" />
 
 # Step 10: Convert RGB to HSV
 ```
@@ -141,7 +141,7 @@ plt.axis("off")
 plt.show()
 ```
 
-<img width="752" height="635" alt="image" src="https://github.com/user-attachments/assets/228fac8c-4a7d-4755-aaba-921d40123424" />
+<img width="650" height="650" alt="image" src="https://github.com/user-attachments/assets/228fac8c-4a7d-4755-aaba-921d40123424" />
 
 
 # Step 11: Convert RGB to Gray
@@ -154,7 +154,7 @@ plt.axis("off")
 plt.show()
 ```
 
-<img width="751" height="635" alt="image" src="https://github.com/user-attachments/assets/42fcfb4c-614d-45ec-90db-e959a2158bfd" />
+<img width="650" height="650" alt="image" src="https://github.com/user-attachments/assets/42fcfb4c-614d-45ec-90db-e959a2158bfd" />
 
 
 # Step 12: Convert RGB to YCrCb
@@ -167,7 +167,7 @@ plt.axis("off")
 plt.show()
 ```
 
-<img width="666" height="560" alt="image" src="https://github.com/user-attachments/assets/46274cef-006f-4fbc-93cc-3c79465c92dd" />
+<img width="650" height="650" alt="image" src="https://github.com/user-attachments/assets/46274cef-006f-4fbc-93cc-3c79465c92dd" />
 
 # Step 13: Convert HSV back to RGB
 ```
@@ -178,7 +178,7 @@ plt.title("HSV to RGB Image")
 plt.axis("off")
 ```
 
-<img width="670" height="570" alt="image" src="https://github.com/user-attachments/assets/7a15b74f-0062-45fd-a122-bcde90dadf63" />
+<img width="650" height="650" alt="image" src="https://github.com/user-attachments/assets/7a15b74f-0062-45fd-a122-bcde90dadf63" />
 
 
 # Step 14: White Block
@@ -191,7 +191,7 @@ plt.axis("off")
 plt.show()
 ```
 
-<img width="674" height="576" alt="image" src="https://github.com/user-attachments/assets/9d70554b-3491-40d9-9898-d024f6c5ce6a" />
+<img width="650" height="650" alt="image" src="https://github.com/user-attachments/assets/9d70554b-3491-40d9-9898-d024f6c5ce6a" />
 
 
 # Step 15: Resize
@@ -205,7 +205,7 @@ plt.axis("off")
 plt.show()
 ```
 
-<img width="744" height="619" alt="image" src="https://github.com/user-attachments/assets/f650e011-6033-4628-9fa3-f0d7140a73ca" />
+<img width="650" height="650" alt="image" src="https://github.com/user-attachments/assets/f650e011-6033-4628-9fa3-f0d7140a73ca" />
 
 
 # Step 16: Crop
@@ -218,7 +218,7 @@ plt.axis("off")
 plt.show()
 ```
 
-<img width="677" height="622" alt="image" src="https://github.com/user-attachments/assets/fc0802a3-a997-479c-87c9-2881c48e0bdc" />
+<img width="650" height="650" alt="image" src="https://github.com/user-attachments/assets/fc0802a3-a997-479c-87c9-2881c48e0bdc" />
 
 
 # Step 17: Horizontal Flip
